@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+// can use so that we have a way to see where the player is aiming
 public class CrosshairController : MonoBehaviour
 {
     private Camera mainCamera;// Reference to the main camera
