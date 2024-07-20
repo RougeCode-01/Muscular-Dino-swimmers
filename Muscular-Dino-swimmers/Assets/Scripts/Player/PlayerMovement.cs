@@ -3,10 +3,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float impulseStrength = 1f; // Strength of the impulse for movement
-    public float rotationSpeed = 360f; // Speed of rotation
-    public float maxSpeed = 5f; // Maximum speed of the player
-
+    [SerializeField] private float impulseStrength = 1f; // Strength of the impulse for movement
+    [SerializeField] private float rotationSpeed = 360f; // Speed of rotation
+    [SerializeField] private float maxSpeed = 5f; // Maximum speed of the player
+    [SerializeField] private float lookSensitivity = 0.1f; // Adjust this value to control look sensitivity
+    
     private Rigidbody2D rb; // Reference to the Rigidbody2D component
 
     private void Awake()
@@ -18,12 +19,25 @@ public class PlayerMovement : MonoBehaviour
             // Log an error if Rigidbody2D is not found
             Debug.LogError("Rigidbody2D component not found on the GameObject.");
         }
+        
+        // Set the player's color to a random color
+        SetColor();
     }
 
     private void FixedUpdate()
     {
         // Limit the player's speed in every FixedUpdate call
         LimitSpeed();
+    }
+    
+    private void SetColor()
+    {
+        // Get the SpriteRenderer component and set the color of the player
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = PlayerManager.GetAndRemoveColor();
+        }
     }
 
     private void LimitSpeed()
@@ -51,32 +65,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        // Determine the control scheme (gamepad or mouse) and rotate accordingly
-        if (Gamepad.current != null && context.control.device == Gamepad.current)
-        {
-            // Read the look input from the gamepad
-            Vector2 lookInput = context.ReadValue<Vector2>();
-            RotateTowardsDirection(lookInput);
-        }
-        else if (Mouse.current != null && context.control.device == Mouse.current)
-        {
-            // Convert mouse position to world space and calculate direction
-            Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
-            Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
-            Vector2 direction = (mouseWorldPosition - (Vector2)transform.position).normalized;
-            RotateTowardsDirection(direction);
-        }
-    }
-
-    private void RotateTowardsDirection(Vector2 direction)
-    {
-        // Rotate the player towards the given direction
-        if (direction != Vector2.zero)
-        {
-            // Calculate the target angle and smoothly rotate towards it
-            var targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-            var angle = Mathf.MoveTowardsAngle(rb.rotation, targetAngle, rotationSpeed * Time.fixedDeltaTime);
-            rb.rotation = angle;
-        }
+        Vector2 lookInput = context.ReadValue<Vector2>() * lookSensitivity; // Apply sensitivity scaling
+        var targetAngle = Mathf.Atan2(lookInput.y, lookInput.x) * Mathf.Rad2Deg - 90f; // Adjust for sprite orientation
+        var angle = Mathf.MoveTowardsAngle(rb.rotation, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+        rb.rotation = angle;
     }
 }
