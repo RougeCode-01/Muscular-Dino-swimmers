@@ -52,6 +52,7 @@ MonoBehaviour:
   impulseStrength: 1
   rotationSpeed: 360
   maxSpeed: 5
+  lookSensitivity: 0.1
 --- !u!212 &-957362689011948199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -173,19 +174,7 @@ MonoBehaviour:
     m_ActionId: 60c7d655-7d5c-481a-bfc2-3128112d1ecb
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -5260474438551155254}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnLook
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 6049daf2-908c-4d30-ad44-90de0cba0752
     m_ActionName: Player/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 1
