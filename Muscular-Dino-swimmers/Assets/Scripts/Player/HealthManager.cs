@@ -16,6 +16,8 @@ public class HealthManager : MonoBehaviour
     GameObject player3;
     GameObject player4;
 
+    int deathCounter = 0;
+
     public void Start()
     {
         players.Add(player1);
@@ -30,7 +32,7 @@ public class HealthManager : MonoBehaviour
         // forget looking for an elegant solution for now, if else if chains make the world go around
         // if any of y'all have a better idea of how to put this together do let me know, I'd love to hear it
 
-        
+
         if (player1 == null)
         {
             player1 = playerInput.gameObject;   // assign the gameobject to the player # var                
@@ -54,14 +56,14 @@ public class HealthManager : MonoBehaviour
         {
 
         }
-        
+
 
 
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        //players.Remove(playerInput.gameObject);
+        // Don't know if we even need this here for our purposes
         if (playerInput.gameObject == player1)
         {
 
@@ -90,9 +92,9 @@ public class HealthManager : MonoBehaviour
 
     public void DamagePlayer(GameObject player)
     {
-        PlayerHP hp = player.GetComponent<PlayerHP>();
+        PlayerHP hp = player.GetComponent<PlayerHP>();      // grab the HP script...
         hp.playerHP -= 1;
-        if (hp.playerHP <= 0)
+        if (hp.playerHP <= 0)                               // check if we're dead
         {
             PlayerDeath(player);
         }
@@ -100,7 +102,7 @@ public class HealthManager : MonoBehaviour
 
     public void PlayerDeath(GameObject dyingPlayer)
     {
-        foreach (GameObject player in players)
+        foreach (GameObject player in players)          // why can't we take the "player" variable in this foreach loop and modify it? Godot wouldn't make me tie my code in a knot like this
         {
             if (dyingPlayer == player)                  // Iterate through the player list until dyingPlayer is found
             {
@@ -108,28 +110,8 @@ public class HealthManager : MonoBehaviour
                 GameObject clear = players[pos];        // get the gameobject at that index
                 clear = null;                           // set it to null so it can be used again
                 Destroy(player);                        // and finally, destroy the dying player
+                deathCounter++;
             }
-        /*
-        if (dyingPlayer == player1)
-        {
-            Destroy(player1);
         }
-        else if (dyingPlayer == player2)
-        {
-            Destroy(player2);
-        }
-        else if (dyingPlayer == player3)
-        {
-            Destroy(player3);
-        }
-        else if (dyingPlayer == player4)
-        {
-            Destroy(player4);
-        }
-        else
-        {
-
-        }
-        */
     }
 }
