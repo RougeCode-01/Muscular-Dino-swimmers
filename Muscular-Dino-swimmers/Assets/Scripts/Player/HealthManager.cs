@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,15 +13,15 @@ public class HealthManager : MonoBehaviour
 
     List<GameObject> players = new List<GameObject>();
 
-    private void OnEnable()
-    {
-        PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
-        PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
-    }
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         players.Add(playerInput.gameObject);
+        foreach (GameObject x in players)
+            {
+            Debug.Log(x.ToString());
+            }
+
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
