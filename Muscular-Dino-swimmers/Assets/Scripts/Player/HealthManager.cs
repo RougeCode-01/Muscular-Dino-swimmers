@@ -57,43 +57,43 @@ public class HealthManager : MonoBehaviour
     {
         // forget looking for an elegant solution for now, if else if chains make the world go around
         // if any of y'all have a better idea of how to put this together do let me know, I'd love to hear it
-        Debug.Log("OnPlayerJoined");
+        //Debug.Log("OnPlayerJoined");
 
         if (player1 == empty)
         {
             player1 = player;   // assign the gameobject to the player # var
             players[0] = player1;
-            Debug.Log("assigned player 1");
+            //Debug.Log("assigned player 1");
         }
 
         else if (player2 == empty)
         {
             player2 = player;
             players[1] = player2;
-            Debug.Log("assigned player 2");
+            //Debug.Log("assigned player 2");
         }
 
         else if (player3 == empty)
         {
             player3 = player;
             players[2] = player3;
-            Debug.Log("assigned player 3");
+            //Debug.Log("assigned player 3");
         }
 
         else if (player4 == empty)
         {
             player4 = player;
             players[3] = player4;
-            Debug.Log("assigned player 4");
+            //Debug.Log("assigned player 4");
         }
         else
         {
 
         }
-        for (int p = 0; p < 4; p++)
-        {
-            Debug.Log(players[p].ToString());
-        }
+        //for (int p = 0; p < 4; p++)
+        //{
+            //Debug.Log(players[p].ToString());
+        //}
 
     }
 
@@ -130,7 +130,7 @@ public class HealthManager : MonoBehaviour
     {
         PlayerHP hp = player.GetComponent<PlayerHP>();      // grab the HP script...
         hp.playerHP -= 1;
-        Debug.Log(hp.playerHP);
+        //Debug.Log(hp.playerHP);
         if (hp.playerHP <= 0)                               // check if we're dead
         {
             PlayerDeath(player);
@@ -144,13 +144,14 @@ public class HealthManager : MonoBehaviour
         for (int p = 0; p < 4; p++)
         {
             GameObject player = players[p];
-            Debug.Log(players[p].ToString());
+            //Debug.Log(players[p].ToString());
             if (player == dyingPlayer)                          // if we're looking at the dying player in the list
             {
                 player = empty;                                 // set it to null so it can be used again
                 players[p] = player;
                 Destroy(dyingPlayer);                           // destroy the dying player
                 deathCounter++;                                 // and up the death counter
+
             }
         }
         //Debug.Log("player death function activated");
