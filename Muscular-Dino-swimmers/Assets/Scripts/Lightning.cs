@@ -9,6 +9,7 @@ public class Lightning : MonoBehaviour
 
     private Coroutine flickerCoroutine;
     private SpriteRenderer spriteRenderer;
+    public HealthManager healthManager;
 
     private void Awake()
     {
@@ -34,13 +35,14 @@ public class Lightning : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Deal damage to the player
-            DamagePlayer();
+            DamagePlayer(other);
         }
     }
     
-    private void DamagePlayer()
+    private void DamagePlayer(Collider2D player)
     {
         // Deal damage to the player
+        healthManager.DamagePlayerHM(player.gameObject);
         Debug.Log("Player has been damaged by the lightning!");
     }
 
