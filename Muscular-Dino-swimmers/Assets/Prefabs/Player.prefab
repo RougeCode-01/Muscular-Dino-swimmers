@@ -66,7 +66,8 @@ MonoBehaviour:
   impulseStrength: 1
   rotationSpeed: 360
   maxSpeed: 5
-  lookSensitivity: 0.1
+  lookSensitivity: 0.05
+  isFrozen: 0
 --- !u!212 &-957362689011948199
 SpriteRenderer:
   m_ObjectHideFlags: 0
