@@ -7,7 +7,7 @@ public class CurrentEffect : MonoBehaviour
 {
 
     public float force= 5f; // Magnitude of the force
-    public float interval = 2f; // Time interval between force applications
+    public float interval = 2f; // Time interval between the current
 
     private bool isPlayerInCollider = false;
     private Coroutine currentCoroutine;
@@ -29,6 +29,7 @@ public class CurrentEffect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player Exited");
             if (isPlayerInCollider)
             {
                 isPlayerInCollider = false;
@@ -48,8 +49,9 @@ public class CurrentEffect : MonoBehaviour
                 
                 rb.AddForce(direction * force, ForceMode2D.Impulse);
             }
-            yield return new WaitForSeconds(interval);
+            
         }
+        yield return new WaitForSeconds(interval);
     }
 }
 
