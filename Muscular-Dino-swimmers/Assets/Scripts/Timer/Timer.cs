@@ -9,14 +9,26 @@ public class Timer : MonoBehaviour
 
     private bool _timerActive;
     private float _currentTime;
-    private int _timeInSeconds; 
+    private int _timeInSeconds;
+    
+    [SerializeField]
+    AudioClip _beepingSound;
+
+    [SerializeField]
+    AudioSource _speaker;
+
+    [SerializeField]
+    private float _lastMinute; //This is for last minute time 
 
     [SerializeField]
     protected int _startMinutes;
 
    [SerializeField]
     private int _startTimeInMinutes = 5;
-    
+
+    [SerializeField]
+    private float _playBeep = 1; //this is the interval that plays Sound
+
     [SerializeField]
     private TMP_Text _text;
 
@@ -25,7 +37,7 @@ public class Timer : MonoBehaviour
         _currentTime = _startTimeInMinutes * 60;
         StartTimer();
         _timeInSeconds = 0;
-
+        _speaker.clip = _beepingSound;
     }
 
 
@@ -46,6 +58,16 @@ public class Timer : MonoBehaviour
 
         }
 
+        if (_currentTime <= _lastMinute)
+        {
+            _playBeep = 1;
+            _playBeep -= Time.deltaTime;
+            if(_playBeep <= 0)
+            {
+                _speaker.Play();
+                _playBeep = 1; // reset Interval
+            }
+        }
 
  
         TimeSpan time = TimeSpan.FromSeconds(_currentTime);
@@ -55,6 +77,8 @@ public class Timer : MonoBehaviour
         {
             Debug.Log("1 second has passed");
         }
+
+
 
         Debug.Log("_timeInSeconds: " + _timeInSeconds);
 
