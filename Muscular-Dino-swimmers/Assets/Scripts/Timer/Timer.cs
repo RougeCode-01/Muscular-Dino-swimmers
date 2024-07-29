@@ -12,10 +12,10 @@ public class Timer : MonoBehaviour
     private int _timeInSeconds;
     
     [SerializeField]
-    AudioClip _beepingSound;
+    private AudioClip _beepingSound;
 
     [SerializeField]
-    AudioSource _speaker;
+    private AudioSource _speaker;
 
     [SerializeField]
     private float _lastMinute; //This is for last minute time 
@@ -24,13 +24,15 @@ public class Timer : MonoBehaviour
     protected int _startMinutes;
 
    [SerializeField]
-    private int _startTimeInMinutes = 5;
+    private float _startTimeInMinutes = 5;
 
     [SerializeField]
-    private float _playBeep = 1; //this is the interval that plays Sound
+    private float _playBeep = 1f; //this is the interval that plays Sound
 
     [SerializeField]
     private TMP_Text _text;
+
+    float beep = 0;
 
     void Start()
     {
@@ -60,12 +62,12 @@ public class Timer : MonoBehaviour
 
         if (_currentTime <= _lastMinute)
         {
-            _playBeep = 1;
-            _playBeep -= Time.deltaTime;
-            if(_playBeep <= 0)
+            beep -= Time.deltaTime;
+            if(beep <= 0)
             {
                 _speaker.Play();
-                _playBeep = 1; // reset Interval
+                beep = _playBeep; // reset Interval
+                Debug.Log("BEEPBEEPEBEPEBPEEPBEP");
             }
         }
 

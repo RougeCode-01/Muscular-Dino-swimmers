@@ -459,11 +459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f304de9583ab4e14b88b405f2d421876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beepingSound: {fileID: 8300000, guid: c0af1865a6f16a74aa79a8acda3790e2, type: 3}
+  _beepingSound: {fileID: 8300000, guid: 16fc2730d79c76646843cabceec785ea, type: 3}
   _speaker: {fileID: 1840115754}
   _lastMinute: 60
   _startMinutes: 0
-  _startTimeInMinutes: 1
+  _startTimeInMinutes: 2
   _playBeep: 1
   _text: {fileID: 972432398}
 --- !u!114 &1840115750
@@ -558,8 +558,8 @@ AudioSource:
   m_GameObject: {fileID: 1840115748}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c0af1865a6f16a74aa79a8acda3790e2, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 88a3e7df1e8cf444492cb1d5f9a28e8e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 16fc2730d79c76646843cabceec785ea, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
