@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1438948205964761153}
   - component: {fileID: 4866680986705704960}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flickerDuration: 0.1
   flickerInterval: 0.2
-  healthManager: {fileID: 0}
 --- !u!61 &4866680986705704960
 BoxCollider2D:
   m_ObjectHideFlags: 0
