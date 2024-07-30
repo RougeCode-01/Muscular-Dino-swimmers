@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -5
-  interval: 2
+  interval: 5
 --- !u!1001 &1501736557
 PrefabInstance:
   m_ObjectHideFlags: 0

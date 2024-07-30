@@ -14,10 +14,11 @@ public class CurrentEffect : MonoBehaviour
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Player is in Contact");
             if (other.CompareTag("Player"))
             {
-                if (!isPlayerInCollider)
+            Debug.Log("Player is in Contact");
+
+            if (!isPlayerInCollider)
                 {
                     isPlayerInCollider = true;
                     currentCoroutine = StartCoroutine(ApplyForce(other.GetComponent<Rigidbody2D>()));
