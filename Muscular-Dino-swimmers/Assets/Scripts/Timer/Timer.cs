@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
+    public UnityEvent TimerEnd;
+    public UnityEvent OnDangerTime; 
 
     private bool _timerActive;
     private float _currentTime;
     private int _timeInSeconds;
-    
+
+    public float dangerTimeThreshold;  
+
     [SerializeField]
     private AudioClip _beepingSound;
 
@@ -44,20 +49,10 @@ public class Timer : MonoBehaviour
 
 
     void Update()
-    {
-
-        Debug.Log(_timerActive);
-
-        
+    {   
         if (_timerActive)
         {
-            //Debug.Log("Time.deltaTime: " + Time.deltaTime);
-            //Debug.Log("_currrentTime:" + _currentTime);
-
-            _currentTime = _currentTime - Time.deltaTime; //good
-
-             //Debug.Log("_currentTime after subtracting Time.deltaTime" + _currentTime);
-
+            _currentTime = _currentTime - Time.deltaTime; 
         }
 
         if (_currentTime <= _lastMinute)
@@ -67,20 +62,23 @@ public class Timer : MonoBehaviour
             {
                 _speaker.Play();
                 beep = _playBeep; // reset Interval
-                Debug.Log("BEEPBEEPEBEPEBPEEPBEP");
             }
         }
-
+        if (_currentTime <= dangerTimeThreshold)
+        {
+           // Debug.Log("dangerTimeThreshold reached: " + dangerTimeThreshold);
+            OnDangerTime?.Invoke();
+        }
  
         TimeSpan time = TimeSpan.FromSeconds(_currentTime);
 
-       // _timeInSeconds = time.Seconds;
-       if (_timeInSeconds == (time.Seconds - 1))
+       // Debug.Log("_currentTime: " + _currentTime);
+
+        if (_currentTime <= 0)
         {
-            Debug.Log("1 second has passed");
+            TimerEnd?.Invoke();
         }
-
-
+        
 
         Debug.Log("_timeInSeconds: " + _timeInSeconds);
 
@@ -100,8 +98,7 @@ public class Timer : MonoBehaviour
 
     void BeepEachSecond()
     {
-        /*
-         */
+        
     }
 
   
