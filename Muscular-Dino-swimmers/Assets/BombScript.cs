@@ -29,6 +29,11 @@ public class BombScript : MonoBehaviour
         {
             StartCoroutine(DefuseBomb(other.GetComponent<PlayerMovement>()));
         }
+        
+        if (other.CompareTag("Player") && _isBeingDefused)
+        {
+            Debug.Log("Bomb is being defused!");
+        }
     }
 
     private IEnumerator DefuseBomb(PlayerMovement player)
