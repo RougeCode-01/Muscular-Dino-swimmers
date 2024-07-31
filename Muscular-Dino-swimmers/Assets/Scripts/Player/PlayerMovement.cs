@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isFrozen) return;
         // Log when movement input is received
-        Debug.Log("Movement input received");
+        //Debug.Log("Movement input received");
         // Read the movement vector, normalize it, and apply an impulse
         Vector2 movementInput = context.ReadValue<Vector2>().normalized;
         if (movementInput != Vector2.zero)

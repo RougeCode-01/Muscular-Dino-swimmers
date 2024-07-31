@@ -11,6 +11,8 @@ using UnityEngine.InputSystem;
 
 public class HealthManager : MonoBehaviour
 {
+    public static HealthManager Instance;
+
     List<GameObject> players = new List<GameObject>();
 
 
@@ -22,6 +24,18 @@ public class HealthManager : MonoBehaviour
 
     int deathCounter = 0;
 
+    void Awake()    //poached directly from unity forums - I want to refer to the health manager easily with the player prefabs when they're instantiated
+    {
+        if (Instance == null) // If there is no instance already
+        {
+            DontDestroyOnLoad(gameObject); // Keep the GameObject, this component is attached to, across different scenes
+            Instance = this;
+        }
+        else if (Instance != this) // If there is already an instance and it's not `this` instance
+        {
+            Destroy(gameObject); // Destroy the GameObject, this component is attached to
+        }
+    }
 
     public void Start()
     {
@@ -41,41 +55,45 @@ public class HealthManager : MonoBehaviour
     }
     public void OnPlayerJoined(GameObject player)
     {
-
-
         // forget looking for an elegant solution for now, if else if chains make the world go around
         // if any of y'all have a better idea of how to put this together do let me know, I'd love to hear it
-        Debug.Log("OnPlayerJoined");
+        //Debug.Log("OnPlayerJoined");
 
         if (player1 == empty)
         {
-            player1 = player;   // assign the gameobject to the player # var                
-            Debug.Log("assigned player 1");
+            player1 = player;   // assign the gameobject to the player # var
+            players[0] = player1;
+            //Debug.Log("assigned player 1");
         }
 
         else if (player2 == empty)
         {
             player2 = player;
-            Debug.Log("assigned player 2");
+            players[1] = player2;
+            //Debug.Log("assigned player 2");
         }
 
         else if (player3 == empty)
         {
             player3 = player;
-            Debug.Log("assigned player 3");
+            players[2] = player3;
+            //Debug.Log("assigned player 3");
         }
 
         else if (player4 == empty)
         {
             player4 = player;
-            Debug.Log("assigned player 4");
+            players[3] = player4;
+            //Debug.Log("assigned player 4");
         }
         else
         {
 
         }
-
-
+        //for (int p = 0; p < 4; p++)
+        //{
+            //Debug.Log(players[p].ToString());
+        //}
 
     }
 
@@ -112,7 +130,7 @@ public class HealthManager : MonoBehaviour
     {
         PlayerHP hp = player.GetComponent<PlayerHP>();      // grab the HP script...
         hp.playerHP -= 1;
-        Debug.Log(hp.playerHP);
+        //Debug.Log(hp.playerHP);
         if (hp.playerHP <= 0)                               // check if we're dead
         {
             PlayerDeath(player);
@@ -122,14 +140,28 @@ public class HealthManager : MonoBehaviour
 
     public void PlayerDeath(GameObject dyingPlayer)
     {
+
+        for (int p = 0; p < 4; p++)
+        {
+            GameObject player = players[p];
+            //Debug.Log(players[p].ToString());
+            if (player == dyingPlayer)                          // if we're looking at the dying player in the list
+            {
+                player = empty;                                 // set it to null so it can be used again
+                players[p] = player;
+                Destroy(dyingPlayer);                           // destroy the dying player
+                deathCounter++;                                 // and up the death counter
+
+            }
+        }
         //Debug.Log("player death function activated");
+        /*
         foreach (GameObject p in players)          // why can't we take the "player" variable in this foreach loop and modify it? Godot wouldn't make me tie my code in a knot like this
         {
-            Destroy(dyingPlayer);                        
-            deathCounter++;
+            Debug.Log("player death foreach function activated");
             if (p == dyingPlayer)                  // Iterate through the player list until dyingPlayer is found
             {
-                Debug.Log("player death foreach function activated");
+
                 int pos = players.IndexOf(p);      // get the index of that player
 
                 GameObject clear = players[pos];        // get the gameobject at that index
@@ -138,5 +170,9 @@ public class HealthManager : MonoBehaviour
                 //deathCounter++;
             }
         }
+        */
+        //Destroy(dyingPlayer);
+        //deathCounter++;
+
     }
 }
