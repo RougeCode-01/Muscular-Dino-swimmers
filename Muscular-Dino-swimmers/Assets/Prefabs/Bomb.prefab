@@ -133,7 +133,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadcaa7eacd80c7419db50ee5e503efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defuseTime: 5
+  defuseTime: 2
   onBombDefused:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 567640850021412030, guid: fb99a78a79a59d640861b5c5165f3136, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

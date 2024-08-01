@@ -8,7 +8,7 @@ public class BombScript : MonoBehaviour
 {
     [SerializeField] private float defuseTime = 5f;
 
-    public UnityEvent onBombDefused;
+    public static UnityEvent onBombDefused = new UnityEvent();
     private bool _isBeingDefused = false;
     
     // Start is called before the first frame update
@@ -44,7 +44,7 @@ public class BombScript : MonoBehaviour
         yield return new WaitForSeconds(defuseTime);
 
         player.Unfreeze();
-        onBombDefused.Invoke();
+        onBombDefused?.Invoke();
         Destroy(gameObject);
     }
 }
