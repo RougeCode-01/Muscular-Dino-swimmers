@@ -122,6 +122,124 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &337315814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186281, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 575442273508186282, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+      propertyPath: m_Name
+      value: MicroAudio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
+--- !u!1001 &781596277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 405761349523242564, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: cb36462b7e2da31499f01593d787187b, type: 3}
+    - target: {fileID: 4456799186052378796, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_Name
+      value: literallyjustcallbgm
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4750752
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.58488715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.047430854
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314596349464657930, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
 --- !u!1001 &929807332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +248,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1584063510279598117, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584063510279598117, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584063510279598117, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584063510279598117, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584063510279598117, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2427898369884465064, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
@@ -214,6 +352,97 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5712694358916206883, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712694358916206883, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712694358916206883, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 6776998559583375581, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 575.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6776998559583375581, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 74.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_text
+      value: 'BOOM!
+
+
+        The DonMarauders are Dead.
+
+        Their families
+        are dead.
+
+        Their pets are being skinned.
+
+        Your mom''s a woman
+        of the night.
+
+        You serve ZERO purpose.
+
+        There is no easter
+        bunny, no tooth fairy, no queen of england.
+
+
+        Game Over.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 73e73b3630a971f40afe232d1f4cd1e5, type: 2}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6525876960560397635, guid: 73e73b3630a971f40afe232d1f4cd1e5, type: 2}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283274390074772735, guid: 21fabeae3a85c5e429a6d574c8ac6065, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -255,7 +484,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -386,3 +615,5 @@ SceneRoots:
   - {fileID: 1322438981}
   - {fileID: 1917337290}
   - {fileID: 929807332}
+  - {fileID: 781596277}
+  - {fileID: 337315814}
