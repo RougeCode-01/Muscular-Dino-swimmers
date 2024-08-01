@@ -43,7 +43,8 @@ public class Lightning : MonoBehaviour
     {
         // Deal damage to the player
         HealthManager.Instance.DamagePlayerHM(player.gameObject);
-        Debug.Log("Player has been damaged by the lightning!");
+        player.GetComponent<Animator>().Play("Hurt");
+        //Debug.Log("Player has been damaged by the lightning!");
     }
 
     private void StartFlicker()
