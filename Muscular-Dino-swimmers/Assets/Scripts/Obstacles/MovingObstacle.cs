@@ -36,9 +36,9 @@ public class MovingObstacle : MonoBehaviour
                 movingRight = true;
         }
     }
-    private void OnCollisionEnter2D(Collider2D other)
-    {
-// Please do not destroy the player. - C
-    }
+//     private void OnCollisionEnter2D(Collider2D other)
+//     {
+// // Please do not destroy the player. - C
+//     }
 
 }

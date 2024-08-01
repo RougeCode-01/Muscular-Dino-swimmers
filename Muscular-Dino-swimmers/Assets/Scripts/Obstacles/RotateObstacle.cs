@@ -17,11 +17,11 @@ public class RotateObstacle : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * Speed * Time.deltaTime);   
     }
-    private void OnCollisionEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(other.gameObject);
-        }
-    }
+    // private void OnCollisionEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         Destroy(other.gameObject);
+    //     }
+    // }
 }

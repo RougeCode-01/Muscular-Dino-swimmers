@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.Events;
-using UnityEditor.Build.Player;
 
 public class Timer : MonoBehaviour
 {
