@@ -22,6 +22,7 @@ public class HealthManager : MonoBehaviour
     GameObject player3;
     GameObject player4;
 
+    public GameObject spawnPoint;
     public HealthUI healthUI;
 
     int deathCounter = 0;
@@ -60,7 +61,7 @@ public class HealthManager : MonoBehaviour
         // forget looking for an elegant solution for now, if else if chains make the world go around
         // if any of y'all have a better idea of how to put this together do let me know, I'd love to hear it
         //Debug.Log("OnPlayerJoined");
-
+        player.transform.position = spawnPoint.transform.position;
         if (player1 == empty)
         {
             player1 = player;   // assign the gameobject to the player # var
@@ -75,7 +76,7 @@ public class HealthManager : MonoBehaviour
             players[1] = player2;
             //Debug.Log("assigned player 2");
             healthUI.AddPlayer2(player);
-        }
+         }
 
         else if (player3 == empty)
         {
