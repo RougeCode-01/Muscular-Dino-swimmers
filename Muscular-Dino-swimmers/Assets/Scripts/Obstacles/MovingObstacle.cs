@@ -36,11 +36,7 @@ public class MovingObstacle : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collider2D other)
     {
-
-        if (other.CompareTag("Player"))
-        {
-            Destroy(other.gameObject); // Destroy the player on collision
-        }
+// Please do not destroy the player. - C
     }
 
 }
