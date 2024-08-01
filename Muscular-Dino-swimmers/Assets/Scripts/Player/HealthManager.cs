@@ -22,6 +22,9 @@ public class HealthManager : MonoBehaviour
     GameObject player3;
     GameObject player4;
 
+    public GameObject spawnPoint;
+    public HealthUI healthUI;
+
     int deathCounter = 0;
 
     void Awake()    //poached directly from unity forums - I want to refer to the health manager easily with the player prefabs when they're instantiated
@@ -58,12 +61,13 @@ public class HealthManager : MonoBehaviour
         // forget looking for an elegant solution for now, if else if chains make the world go around
         // if any of y'all have a better idea of how to put this together do let me know, I'd love to hear it
         //Debug.Log("OnPlayerJoined");
-
+        player.transform.position = spawnPoint.transform.position;
         if (player1 == empty)
         {
             player1 = player;   // assign the gameobject to the player # var
             players[0] = player1;
             //Debug.Log("assigned player 1");
+            healthUI.AddPlayer1(player);
         }
 
         else if (player2 == empty)
@@ -71,13 +75,15 @@ public class HealthManager : MonoBehaviour
             player2 = player;
             players[1] = player2;
             //Debug.Log("assigned player 2");
-        }
+            healthUI.AddPlayer2(player);
+         }
 
         else if (player3 == empty)
         {
             player3 = player;
             players[2] = player3;
             //Debug.Log("assigned player 3");
+            healthUI.AddPlayer3(player);
         }
 
         else if (player4 == empty)
@@ -85,6 +91,7 @@ public class HealthManager : MonoBehaviour
             player4 = player;
             players[3] = player4;
             //Debug.Log("assigned player 4");
+            healthUI.AddPlayer4(player);
         }
         else
         {
@@ -102,21 +109,22 @@ public class HealthManager : MonoBehaviour
         // Don't know if we even need this here for our purposes
         if (player == player1)
         {
-
+            healthUI.RemovePlayer1();
         }
 
         else if (player == player2)
         {
-
+            healthUI.RemovePlayer2();
         }
 
         else if (player == player3)
         {
-
+            healthUI.RemovePlayer3();
         }
 
         else if (player == player4)
         {
+            healthUI.RemovePlayer4();
 
         }
 
@@ -128,9 +136,10 @@ public class HealthManager : MonoBehaviour
 
     public void DamagePlayerHM(GameObject player)
     {
+        Debug.Log(player);
         PlayerHP hp = player.GetComponent<PlayerHP>();      // grab the HP script...
         hp.playerHP -= 1;
-        //Debug.Log(hp.playerHP);
+        Debug.Log(hp.playerHP);
         if (hp.playerHP <= 0)                               // check if we're dead
         {
             PlayerDeath(player);
@@ -147,6 +156,7 @@ public class HealthManager : MonoBehaviour
             //Debug.Log(players[p].ToString());
             if (player == dyingPlayer)                          // if we're looking at the dying player in the list
             {
+                OnPlayerLeft(dyingPlayer);
                 player = empty;                                 // set it to null so it can be used again
                 players[p] = player;
                 Destroy(dyingPlayer);                           // destroy the dying player
