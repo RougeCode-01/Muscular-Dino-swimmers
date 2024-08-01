@@ -40,11 +40,20 @@ public class BombScript : MonoBehaviour
     {
         _isBeingDefused = true;
         player.Freeze();
+        player.GetComponent<Animator>().Play("Interact");
 
         yield return new WaitForSeconds(defuseTime);
 
         player.Unfreeze();
         onBombDefused?.Invoke();
         Destroy(gameObject);
+        StartCoroutine(BombFinished(player));
+    }
+
+    private IEnumerator BombFinished(PlayerMovement player)
+    {
+        player.GetComponent<Animator>().Play("OK");
+        yield return new WaitForSeconds(defuseTime / 3);
+        player.GetComponent<Animator>().Play("Swim");
     }
 }
