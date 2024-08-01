@@ -45,7 +45,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.03137255, g: 0.043137256, b: 0.74509805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -124,32 +124,32 @@ MonoBehaviour:
   crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
   _runtimeMaterial: {fileID: 0}
   data:
-    pixelationAmount: 8
+    pixelationAmount: 2
     maxColorChannels:
-      red: 0
-      green: 0
-      blue: 0
-      greyScale: 0
-    dithering4: 0
-    dithering8: 0
-    vignette: 0.292
+      red: 32
+      green: 32
+      blue: 32
+      greyScale: 0.091
+    dithering4: 0.04
+    dithering8: 0.023
+    vignette: 0.079
     innerCurve: 20
-    monitorCurve: 0.038
+    monitorCurve: 0.024
     monitorInnerSize:
       width: 0
       height: 0
     monitorOutterSize:
       width: 0.1
       height: 0.1
-    zoom: 1.19
+    zoom: 1.21
     monitorRoundness: 0.2
     monitorTexture: {fileID: 0}
-    monitorColor: {r: 0.121796034, g: 0.12775578, b: 0.16037738, a: 1}
-    innerMonitorDarkness: 0.215
-    innerMonitorShine: 0.01
+    monitorColor: {r: 0, g: 0, b: 0, a: 1}
+    innerMonitorDarkness: 0.239
+    innerMonitorShine: 0.233
     colorScans:
-      greenChannelMultiplier: -0.355
-      redBlueChannelMultiplier: -0.334
-      sizeMultiplier: 3.06
+      greenChannelMultiplier: -0.1
+      redBlueChannelMultiplier: -0.1
+      sizeMultiplier: 2
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
