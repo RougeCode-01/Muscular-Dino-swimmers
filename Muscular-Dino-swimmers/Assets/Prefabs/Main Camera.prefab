@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 332864413263744381}
   - component: {fileID: 5987058185880972278}
   - component: {fileID: 8321082246204315776}
+  - component: {fileID: 1031954235307588982}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -44,7 +45,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.03137255, g: 0.043137256, b: 0.74509805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -107,3 +108,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 2
   minSize: 5
+--- !u!114 &1031954235307588982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724065951308392242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86832f84a0cf34eb9b89129d49b7a15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startConfig: {fileID: 11400000, guid: 6a4cfee667ae5420fbc0ff45d34bb1d5, type: 2}
+  crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
+  _runtimeMaterial: {fileID: 0}
+  data:
+    pixelationAmount: 2
+    maxColorChannels:
+      red: 32
+      green: 32
+      blue: 32
+      greyScale: 0.091
+    dithering4: 0.04
+    dithering8: 0.023
+    vignette: 0.079
+    innerCurve: 20
+    monitorCurve: 0.024
+    monitorInnerSize:
+      width: 0
+      height: 0
+    monitorOutterSize:
+      width: 0.1
+      height: 0.1
+    zoom: 1.21
+    monitorRoundness: 0.2
+    monitorTexture: {fileID: 0}
+    monitorColor: {r: 0, g: 0, b: 0, a: 1}
+    innerMonitorDarkness: 0.239
+    innerMonitorShine: 0.233
+    colorScans:
+      greenChannelMultiplier: -0.1
+      redBlueChannelMultiplier: -0.1
+      sizeMultiplier: 2
+    innerMonitorShineRadius: -0.087
+    innerMonitorShineCurve: 10
