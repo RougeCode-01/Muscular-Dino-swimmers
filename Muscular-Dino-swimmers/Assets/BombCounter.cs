@@ -30,10 +30,17 @@ public class BombCounter : MonoBehaviour
     // Update is called once per frame
     void UpdateBombText()
     {
-        bombs = GameObject.FindGameObjectsWithTag("Bomb");
         MicroAudio.PlayUISound(uiClip1);
+        StartCoroutine(wait());
+        bombs = GameObject.FindGameObjectsWithTag("Bomb");
         bombText.text = bombs.Length.ToString();
     }
 
-    
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
+
+
 }
