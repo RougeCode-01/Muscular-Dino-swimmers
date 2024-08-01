@@ -42,7 +42,7 @@ public class Lightning : MonoBehaviour
     private void DamagePlayer(Collider2D player)
     {
         // Deal damage to the player
-        healthManager.DamagePlayerHM(player.gameObject);
+        HealthManager.Instance.DamagePlayerHM(player.gameObject);
         Debug.Log("Player has been damaged by the lightning!");
     }
 
