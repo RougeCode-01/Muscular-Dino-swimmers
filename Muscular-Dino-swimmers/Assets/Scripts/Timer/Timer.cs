@@ -4,11 +4,13 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.Events;
+using UnityEditor.Build.Player;
 
 public class Timer : MonoBehaviour
 {
     public UnityEvent TimerEnd;
-    public UnityEvent OnDangerTime; 
+    public UnityEvent OnDangerTime;
+    public UnityEvent GameOver; 
 
     private bool _timerActive;
     private float _currentTime;
@@ -48,8 +50,7 @@ public class Timer : MonoBehaviour
         _timeInSeconds = 0;
         _speaker.clip = _beepingSound;
     }
-
-    //TODO modularize audio beeping 
+ 
 
     void Update()
     {   
@@ -87,10 +88,18 @@ public class Timer : MonoBehaviour
         else // Our timer is off, _timerActive == false  
         {
             TimerEnd?.Invoke();  //Send an event to the world (which will end the game) 
-
+            GameOverTrigger();
         }
-        
+
     }
+
+
+    void GameOverTrigger() //When timer reaches zero 
+    {
+        GameOver?.Invoke(); 
+    }
+
+
 
     /// <summary>
     /// Updates the TMP.text field with the converted time. 

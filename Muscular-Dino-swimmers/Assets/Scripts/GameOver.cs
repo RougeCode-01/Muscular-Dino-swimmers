@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void GayyyOver()
     {
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); //additive is stacker kinda function 
+        SceneManager.LoadScene("GameOver");
     }
 
 }
