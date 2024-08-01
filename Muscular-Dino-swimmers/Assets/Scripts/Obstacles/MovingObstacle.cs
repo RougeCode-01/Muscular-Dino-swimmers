@@ -34,12 +34,13 @@ public class MovingObstacle : MonoBehaviour
                 movingRight = true;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collider2D other)
     {
+
         if (other.CompareTag("Player"))
         {
             Destroy(other.gameObject); // Destroy the player on collision
         }
     }
+
 }
