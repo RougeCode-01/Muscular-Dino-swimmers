@@ -22,6 +22,7 @@ public class Seaweed : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ActivateLightning();
+            HealthManager.Instance.DamagePlayerHM(collision.gameObject);
             Debug.Log("Player has awaken the seaweed!!!");
         }
     }
