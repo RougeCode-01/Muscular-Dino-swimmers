@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         // Set the player's color to a random color
-        //SetColor();
+        SetColor();
     }
 
     private void FixedUpdate()
@@ -36,10 +36,10 @@ public class PlayerMovement : MonoBehaviour
     private void SetColor()
     {
         // Get the SpriteRenderer component and set the color of the player
-        //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        //if (spriteRenderer != null)
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
         {
-           // spriteRenderer.color = PlayerManager.GetAndRemoveColor();
+           spriteRenderer.color = PlayerManager.GetAndRemoveColor();
         }
     }
 

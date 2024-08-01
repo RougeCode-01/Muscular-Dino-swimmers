@@ -312,6 +312,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f9aed4da3fb3b4eb141e46cecf0372, type: 3}
+--- !u!1 &896107277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896107278}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &896107278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896107277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &918581543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,6 +480,10 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 0.8888889
       objectReference: {fileID: 0}
+    - target: {fileID: 1031954235307588982, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: _runtimeMaterial
+      value: 
+      objectReference: {fileID: 1437852758}
     - target: {fileID: 3877068375031938442, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -492,6 +527,10 @@ PrefabInstance:
     - target: {fileID: 4724065951308392242, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226205742922721692, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6258026122358391097, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
       propertyPath: m_AssetsPPU
@@ -744,7 +783,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
---- !u!21 &1619690649
+--- !u!21 &1437852758
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1111,3 +1150,4 @@ SceneRoots:
   - {fileID: 918581543}
   - {fileID: 3854262037444277633}
   - {fileID: 1303661523}
+  - {fileID: 896107278}
