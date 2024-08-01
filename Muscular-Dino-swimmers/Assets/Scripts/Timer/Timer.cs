@@ -97,6 +97,7 @@ public class Timer : MonoBehaviour
     void GameOverTrigger() //When timer reaches zero 
     {
         GameOver?.Invoke(); 
+        Application.LoadLevel("GameOver");
     }
 
 
