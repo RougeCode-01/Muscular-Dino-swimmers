@@ -179,37 +179,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9722a8caf357ea04e93904db841154cc, type: 3}
---- !u!1 &411990934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 411990935}
-  m_Layer: 0
-  m_Name: spawnpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &411990935
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411990934}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1682358458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &417827316 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4868852081218075497, guid: fb99a78a79a59d640861b5c5165f3136, type: 3}
@@ -280,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 7742307722451118893, guid: 27d4f9ed505c91644b2aa8d7f2268bee, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 411990934}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -460,6 +429,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332864413263744381, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: orthographic size
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 332864413263744381, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.16666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 332864413263744381, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.055555556
+      objectReference: {fileID: 0}
+    - target: {fileID: 332864413263744381, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 332864413263744381, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.8888889
+      objectReference: {fileID: 0}
     - target: {fileID: 3877068375031938442, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -504,12 +493,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6258026122358391097, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
+      propertyPath: m_AssetsPPU
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3877068375031938442, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 411990935}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
 --- !u!1001 &1083782026
@@ -754,7 +744,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2d4d906339da84449019d36bd0e4ff3, type: 3}
---- !u!21 &1553700027
+--- !u!21 &1619690649
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -778,7 +768,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BorderTex:
-        m_Texture: {fileID: 2800000, guid: a5e897f9f29eb488ba4791cd52d004b5, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -819,23 +809,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BorderInnerDarkerAmount: 0.864
+    - _BorderInnerDarkerAmount: 0.76100004
     - _BorderInnerSharpness: 0.996
-    - _BorderInnerSizeX: 0.032
-    - _BorderInnerSizeY: 0.053
-    - _BorderOutterRound: 0.015
+    - _BorderInnerSizeX: 0
+    - _BorderInnerSizeY: 0
+    - _BorderOutterRound: 0.2
     - _BorderOutterSharpness: 1
-    - _BorderOutterSizeX: 0.022
-    - _BorderOutterSizeY: 0
-    - _BorderZoom: 1.09
+    - _BorderOutterSizeX: 0.1
+    - _BorderOutterSizeY: 0.1
+    - _BorderZoom: 1.21
     - _BottomStaticOpt: 0
     - _BumpScale: 1
-    - _CrtGlowAmount: 0.081
-    - _CrtReflectionCurve: 1.2
+    - _CrtGlowAmount: 0.233
+    - _CrtReflectionCurve: 10
     - _CrtReflectionFalloff: 0.24
-    - _CrtReflectionRadius: 0.1
+    - _CrtReflectionRadius: -0.087
     - _Curvature: 20
-    - _Curvature2: 0.028
+    - _Curvature2: 0
     - _Cutoff: 0.5
     - _Desaturation: 0
     - _DetailNormalMapScale: 1
@@ -856,25 +846,20 @@ Material:
     - _ScanlinesOpt: 0.4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Spread: 0.5
-    - _Spread8: 0.5
+    - _Spread: 0.04
+    - _Spread8: 0.023
     - _SrcBlend: 1
     - _UVSec: 0
     - _VertJerkOpt: 1
     - _VertMovementOpt: 1
-    - _VigSize: 0.2
+    - _VigSize: 0.063
     - _ZWrite: 1
     m_Colors:
-    - _BorderTint: {r: 0.16349235, g: 0.18940695, b: 0.20754719, a: 0.3137255}
+    - _BorderTint: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorScans: {r: 0.15, g: 0.2, b: 1, a: 0}
+    - _ColorScans: {r: -0.1, g: -0.1, b: 2, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!4 &1682358458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3877068375031938442, guid: 061a054096d789a4e8f59e1ce56941c6, type: 3}
-  m_PrefabInstance: {fileID: 1003228235}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1718020917
 PrefabInstance:
   m_ObjectHideFlags: 0

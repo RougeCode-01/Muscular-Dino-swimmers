@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5987058185880972278}
   - component: {fileID: 8321082246204315776}
   - component: {fileID: 1031954235307588982}
+  - component: {fileID: 6258026122358391097}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -126,15 +127,15 @@ MonoBehaviour:
   data:
     pixelationAmount: 2
     maxColorChannels:
-      red: 32
-      green: 32
-      blue: 32
-      greyScale: 0.091
+      red: 0
+      green: 0
+      blue: 0
+      greyScale: 0
     dithering4: 0.04
     dithering8: 0.023
-    vignette: 0.079
+    vignette: 0.063
     innerCurve: 20
-    monitorCurve: 0.024
+    monitorCurve: 0
     monitorInnerSize:
       width: 0
       height: 0
@@ -153,3 +154,23 @@ MonoBehaviour:
       sizeMultiplier: 2
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
+--- !u!114 &6258026122358391097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724065951308392242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 50
+  m_RefResolutionX: 640
+  m_RefResolutionY: 480
+  m_UpscaleRT: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 0
