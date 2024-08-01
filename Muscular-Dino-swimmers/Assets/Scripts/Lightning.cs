@@ -42,8 +42,9 @@ public class Lightning : MonoBehaviour
     private void DamagePlayer(Collider2D player)
     {
         // Deal damage to the player
-        healthManager.DamagePlayerHM(player.gameObject);
-        Debug.Log("Player has been damaged by the lightning!");
+        HealthManager.Instance.DamagePlayerHM(player.gameObject);
+        player.GetComponent<Animator>().Play("Hurt");
+        //Debug.Log("Player has been damaged by the lightning!");
     }
 
     private void StartFlicker()
