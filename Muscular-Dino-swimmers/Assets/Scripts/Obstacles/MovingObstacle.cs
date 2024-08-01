@@ -19,6 +19,8 @@ public class MovingObstacle : MonoBehaviour
 
     void Update()
     {
+        // This works but isn't scalable, if you rotate the object to create one that moves up and down, it breaks the entire script.
+        // In the future, please consider a more scalable option such as PointA and PointB, or something simpler like a DOTWEEN based on movement distance? -C
         // Calculate movement
         float movement = speed * Time.deltaTime;
         if (movingRight)
