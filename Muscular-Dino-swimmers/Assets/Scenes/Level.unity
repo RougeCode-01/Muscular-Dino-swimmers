@@ -615,7 +615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f0e17f35a09d143aa49b89a23cdee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombs: []
   bombText: {fileID: 417827316}
   uiClip1: {fileID: 8300000, guid: 4827dd82a6ce74d34b74037ca95666ee, type: 3}
 --- !u!1001 &1303661523
