@@ -33,7 +33,7 @@ public class BombCounter : MonoBehaviour
 
         if (bombs.Length == 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
